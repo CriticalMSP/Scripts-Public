@@ -8,18 +8,6 @@ param (
 )
 
 
-
-
-   $Scripts = "C:\Scripts"
-   $gitLink = 
- 
-
-# Check if these files exists, if it does, remove it
-
-if(Test-Path $Installer){
-    Write-Output ".EXE FOUND, Continuing..."
-    }
-
 # Function to write to event log
 function Write-EventLogMessage {
     param (
@@ -52,3 +40,4 @@ function Write-EventLogMessage {
 
 # Call Write-EventLogMessage function with provided parameters
 Write-EventLogMessage -EntryType $EntryType -Message $Message
+
